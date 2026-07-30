@@ -4,61 +4,86 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>محمد الأمير علي — السيرة الذاتية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-        font-family: "Segoe UI", "Dubai", "Tahoma", Arial, sans-serif;
-        font-size: 11pt;
-        line-height: 1.6;
-        color: #222;
+        font-family: 'Cairo', 'Segoe UI', Tahoma, Arial, sans-serif;
+        font-size: 10.5pt;
+        line-height: 1.75;
+        color: #2b2b2b;
         background: #e8e8e8;
         padding: 24px 0;
+        -webkit-font-smoothing: antialiased;
     }
 
     .page {
         width: 210mm;
         min-height: 297mm;
         margin: 0 auto;
-        padding: 14mm 15mm;
+        padding: 13mm 15mm;
         background: #fff;
         box-shadow: 0 2px 12px rgba(0,0,0,.18);
     }
 
-    /* ---------- Header ---------- */
+    /* ---------- الترويسة ---------- */
+    header {
+        display: flex;
+        align-items: center;
+        gap: 7mm;
+        padding-bottom: 9px;
+        border-bottom: 2.5px solid #14395c;
+    }
+
+    .photo {
+        width: 27mm;
+        height: 27mm;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center top;
+        border: 2.5px solid #14395c;
+        flex-shrink: 0;
+    }
+
+    .identity { flex: 1; }
+
     .name {
-        font-size: 22pt;
-        font-weight: 700;
+        font-size: 21pt;
+        font-weight: 900;
+        line-height: 1.25;
         color: #14395c;
     }
     .role {
-        font-size: 12.5pt;
-        font-weight: 600;
-        color: #2b6cb0;
-        margin-top: 2px;
-    }
-    .contact {
-        margin-top: 6px;
-        font-size: 10pt;
-        color: #444;
-    }
-    .contact a { color: #444; text-decoration: none; }
-    .contact span + span::before { content: "  •  "; color: #999; }
-    .ltr { direction: ltr; display: inline-block; unicode-bidi: embed; }
-
-    /* ---------- Sections ---------- */
-    h2 {
         font-size: 12pt;
         font-weight: 700;
+        color: #2b6cb0;
+        margin-top: 1px;
+    }
+    .contact {
+        margin-top: 5px;
+        font-size: 9.6pt;
+        color: #4a4a4a;
+    }
+    .contact a { color: #4a4a4a; text-decoration: none; }
+    .contact span + span::before { content: "   |   "; color: #b9b9b9; }
+    .ltr { direction: ltr; display: inline-block; unicode-bidi: embed; font-family: 'Lato', sans-serif; }
+
+    /* ---------- الأقسام ---------- */
+    h2 {
+        font-size: 11.5pt;
+        font-weight: 900;
         color: #14395c;
-        border-bottom: 1.5px solid #14395c;
-        padding-bottom: 3px;
-        margin: 15px 0 8px;
+        margin: 13px 0 7px;
+        padding-bottom: 2px;
+        border-bottom: 1px solid #d4d4d4;
     }
 
     p.summary { text-align: justify; }
 
-    .job { margin-bottom: 11px; page-break-inside: avoid; }
+    .job { margin-bottom: 10px; page-break-inside: avoid; }
     .job:last-child { margin-bottom: 0; }
 
     .job-head {
@@ -68,30 +93,31 @@
         gap: 12px;
     }
     .job-title { font-size: 11pt; font-weight: 700; color: #1a1a1a; }
-    .job-date  { font-size: 9.5pt; font-weight: 600; color: #666; white-space: nowrap; }
-    .job-org   { font-size: 10pt; color: #2b6cb0; margin-bottom: 3px; }
+    .job-date  { font-size: 9.2pt; font-weight: 600; color: #7a7a7a; white-space: nowrap; }
+    .job-org   { font-size: 10pt; font-weight: 600; color: #2b6cb0; margin-bottom: 2px; }
 
-    ul { margin: 0; padding-right: 18px; }
-    li { margin-bottom: 3px; }
+    ul { margin: 0; padding-right: 17px; }
+    li { margin-bottom: 2px; }
+    li::marker { color: #2b6cb0; }
 
-    .note { font-size: 9.5pt; color: #666; }
+    .note { font-size: 9.3pt; color: #6e6e6e; }
 
-    /* ---------- Two-column blocks ---------- */
+    /* ---------- أعمدة ---------- */
     .cols { display: flex; gap: 26px; }
     .cols > div { flex: 1; }
 
     .skills {
         column-count: 2;
-        column-gap: 26px;
-        padding-right: 18px;
+        column-gap: 24px;
+        padding-right: 17px;
     }
     .skills li { break-inside: avoid; }
 
-    /* ---------- Print ---------- */
-    @page { size: A4; margin: 12mm 13mm; }
+    /* ---------- الطباعة ---------- */
+    @page { size: A4; margin: 11mm 13mm; }
 
     @media print {
-        body { background: #fff; padding: 0; font-size: 10.5pt; }
+        body { background: #fff; padding: 0; font-size: 10.2pt; }
         .page {
             width: auto;
             min-height: 0;
@@ -99,8 +125,9 @@
             padding: 0;
             box-shadow: none;
         }
-        a { color: #222 !important; }
+        a { color: #2b2b2b !important; }
         h2 { page-break-after: avoid; }
+        .photo { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     }
 </style>
 </head>
@@ -109,12 +136,15 @@
 
     <!-- ================= الترويسة ================= -->
     <header>
-        <div class="name">محمد الأمير علي</div>
-        <div class="role">مسؤول تنفيذي للعمليات</div>
-        <div class="contact">
-            <span class="ltr">+971 55 379 6104</span>
-            <span class="ltr"><a href="mailto:mo.alamir52@gmail.com">mo.alamir52@gmail.com</a></span>
-            <span>دبي، الإمارات العربية المتحدة</span>
+        <img class="photo" src="mohamed-alamir.jpg" alt="محمد الأمير علي">
+        <div class="identity">
+            <div class="name">محمد الأمير علي</div>
+            <div class="role">مسؤول تنفيذي للعمليات</div>
+            <div class="contact">
+                <span class="ltr">+971 55 379 6104</span>
+                <span class="ltr"><a href="mailto:mo.alamir52@gmail.com">mo.alamir52@gmail.com</a></span>
+                <span>دبي، الإمارات</span>
+            </div>
         </div>
     </header>
 
@@ -123,7 +153,7 @@
     <p class="summary">
         مسؤول عمليات يملك خبرة تتجاوز 10 سنوات في عمليات التأجير، والإدارة، والمحاسبة، وخدمة العملاء.
         أدير حاليًا العمليات اليومية لشركة تأجير سيارات في دبي بأسطول يتجاوز 1,300 سيارة، وقمت بتصميم
-        وبناء منصتها الداخلية "ييلو" (React + Firebase) — نظام متعدد الموديولات يغطي حالة الأسطول،
+        وبناء منصتها الداخلية "ييلو" (<span class="ltr">React + Firebase</span>) — نظام متعدد الموديولات يغطي حالة الأسطول،
         الحجوزات والعقود، الإدارة المالية، إدارة الموظفين، والصيانة. أتقن أنظمة تخطيط موارد المؤسسات (ERP)
         وإدارة علاقات العملاء (CRM) والرقابة المالية، وأمتلك قدرة مثبتة على تحويل الأعمال اليدوية المعتمدة
         على الجداول إلى أنظمة برمجية تُلغي الخطأ البشري. أجيد اللغتين العربية والإنجليزية.
@@ -214,10 +244,20 @@
             <li>بناء ونشر منصة متعددة الموديولات تغطي العمل بالكامل: مخزون الأسطول والحالة الفعلية للسيارات، الحجوزات والعقود، الإدارة المالية والفواتير، إدارة الموظفين، متابعة الصيانة، وتسوية حسابات شريك Invygo.</li>
             <li>توليد الفواتير والتقارير آليًا بناءً على المدخلات التشغيلية، مما ألغى الحساب اليدوي وقضى فعليًا على الخطأ البشري في الفواتير وإدخال البيانات.</li>
             <li>رفع معدل تشغيل الأسطول بإظهار الحالة الحقيقية للسيارات في الوقت الفعلي، فأصبح تحديد السيارات المتاحة فوريًا ومتابعة الصيانة مستمرة بدل أن تكون بعد وقوع المشكلة.</li>
-            <li>استبدال التتبّع عبر الجداول في عملية تشمل أكثر من 1,300 سيارة بمصدر بيانات واحد موثوق، محمي بـ Firebase Authentication وصلاحيات وصول محددة.</li>
+            <li>استبدال التتبّع عبر الجداول في عملية تشمل أكثر من 1,300 سيارة بمصدر بيانات واحد موثوق، محمي بـ <span class="ltr">Firebase Authentication</span> وصلاحيات وصول محددة.</li>
             <li class="note">نظام إداري داخلي — الوصول إليه مقيّد لاحتوائه على بيانات سرية للعملاء والموظفين. يمكن تقديم عرض توضيحي عند الطلب.</li>
         </ul>
     </div>
+
+    <!-- ================= الإنجازات ================= -->
+    <h2>الإنجازات الرئيسية</h2>
+    <ul>
+        <li>الاختيار ضمن <strong>أفضل 5 موظفين في شركة ييلو لتأجير السيارات، الإمارات</strong>.</li>
+        <li>بناء وإطلاق منصة ييلو الإدارية، وتحويل عملية تأجير تشمل أكثر من 1,300 سيارة كانت تُدار يدويًا عبر الجداول إلى نظام رقمي متكامل.</li>
+        <li>أتمتة الفواتير والتقارير، مما قضى فعليًا على الخطأ البشري في الفواتير ورفع معدل تشغيل الأسطول عبر إظهار حالة السيارات في الوقت الفعلي.</li>
+        <li>الاختيار ضمن أفضل 10 موظفين في المنطقة بأسواق عبد الله العثيم.</li>
+        <li>تدريب وإرشاد أعضاء الفريق الجدد، مما ساهم في تحسين أداء الفريق بنسبة 15%.</li>
+    </ul>
 
     <!-- ================= المهارات ================= -->
     <h2>المهارات الأساسية</h2>
@@ -238,15 +278,6 @@
         <li>حزمة مايكروسوفت أوفيس</li>
         <li>قيادة الفرق والتدريب</li>
         <li>الالتزام والسرية</li>
-    </ul>
-
-    <!-- ================= الإنجازات ================= -->
-    <h2>الإنجازات الرئيسية</h2>
-    <ul>
-        <li>بناء وإطلاق منصة ييلو الإدارية، وتحويل عملية تأجير تشمل أكثر من 1,300 سيارة كانت تُدار يدويًا عبر الجداول إلى نظام رقمي متكامل.</li>
-        <li>أتمتة الفواتير والتقارير، مما قضى فعليًا على الخطأ البشري في الفواتير ورفع معدل تشغيل الأسطول عبر إظهار حالة السيارات في الوقت الفعلي.</li>
-        <li>الاختيار ضمن أفضل 10 موظفين في المنطقة بأسواق عبد الله العثيم.</li>
-        <li>تدريب وإرشاد أعضاء الفريق الجدد، مما ساهم في تحسين أداء الفريق بنسبة 15%.</li>
     </ul>
 
     <!-- ================= التعليم واللغات ================= -->
