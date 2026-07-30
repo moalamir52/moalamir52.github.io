@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohamed Alamir Ali — Resume</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: "Segoe UI", Calibri, Arial, sans-serif;
+        font-size: 10.5pt;
+        line-height: 1.45;
+        color: #222;
+        background: #e8e8e8;
+        padding: 24px 0;
+    }
+
+    .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        padding: 14mm 15mm;
+        background: #fff;
+        box-shadow: 0 2px 12px rgba(0,0,0,.18);
+    }
+
+    /* ---------- Header ---------- */
+    .name {
+        font-size: 22pt;
+        font-weight: 700;
+        letter-spacing: .5px;
+        color: #14395c;
+    }
+    .role {
+        font-size: 12pt;
+        font-weight: 600;
+        color: #2b6cb0;
+        margin-top: 2px;
+    }
+    .contact {
+        margin-top: 6px;
+        font-size: 9.5pt;
+        color: #444;
+    }
+    .contact a { color: #444; text-decoration: none; }
+    .contact span + span::before { content: "  •  "; color: #999; }
+
+    /* ---------- Sections ---------- */
+    h2 {
+        font-size: 11pt;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+        color: #14395c;
+        border-bottom: 1.5px solid #14395c;
+        padding-bottom: 3px;
+        margin: 15px 0 8px;
+    }
+
+    p.summary { text-align: justify; }
+
+    .job { margin-bottom: 11px; page-break-inside: avoid; }
+    .job:last-child { margin-bottom: 0; }
+
+    .job-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+    }
+    .job-title { font-size: 10.5pt; font-weight: 700; color: #1a1a1a; }
+    .job-date  { font-size: 9pt; font-weight: 600; color: #666; white-space: nowrap; }
+    .job-org   { font-size: 9.5pt; font-style: italic; color: #2b6cb0; margin-bottom: 3px; }
+
+    ul { margin: 0; padding-left: 15px; }
+    li { margin-bottom: 2.5px; }
+
+    .note { font-size: 9pt; color: #666; font-style: italic; }
+
+    /* ---------- Two-column blocks ---------- */
+    .cols { display: flex; gap: 26px; }
+    .cols > div { flex: 1; }
+
+    .skills {
+        column-count: 2;
+        column-gap: 26px;
+        padding-left: 15px;
+    }
+    .skills li { break-inside: avoid; }
+
+    /* ---------- Print ---------- */
+    @page { size: A4; margin: 12mm 13mm; }
+
+    @media print {
+        body { background: #fff; padding: 0; font-size: 10pt; }
+        .page {
+            width: auto;
+            min-height: 0;
+            margin: 0;
+            padding: 0;
+            box-shadow: none;
+        }
+        a { color: #222 !important; }
+        h2 { page-break-after: avoid; }
+    }
+</style>
+</head>
+<body>
+<div class="page">
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <div class="name">Mohamed Alamir Ali</div>
+        <div class="role">Operations Executive</div>
+        <div class="contact">
+            <span>+971 55 379 6104</span>
+            <span><a href="mailto:mo.alamir52@gmail.com">mo.alamir52@gmail.com</a></span>
+            <span>Dubai, United Arab Emirates</span>
+        </div>
+    </header>
+
+    <!-- ================= SUMMARY ================= -->
+    <h2>Professional Summary</h2>
+    <p class="summary">
+        Operations professional with over 10 years across rental operations, administration, accounting, and
+        customer service. Currently manage daily operations for a Dubai car rental company running a fleet of
+        1,300+ vehicles, and designed and built its in-house YELO platform (React + Firebase) — a multi-module
+        system covering fleet status, bookings and contracts, financial management, staff administration, and
+        maintenance. Strong in ERP and CRM systems, financial controls, and turning manual spreadsheet
+        workflows into working software that removes human error. Fluent in Arabic and English.
+    </p>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <h2>Professional Experience</h2>
+
+    <div class="job">
+        <div class="job-head">
+            <span class="job-title">Operations Executive</span>
+            <span class="job-date">Dec 2024 – Present</span>
+        </div>
+        <div class="job-org">Yelo Rent A Car — Dubai, UAE</div>
+        <ul>
+            <li>Manage daily rental operations for a fleet of <strong>1,300+ vehicles</strong> across daily, monthly, and long-term contracts, serving individual customers, corporate accounts, and leasing companies.</li>
+            <li>Own the administrative and financial function: rental agreements, customer records, automated invoicing, and reconciliation of Salik tolls, traffic fines, and parking charges.</li>
+            <li>Track fleet availability and utilisation against live vehicle status, reducing idle days and preventing double-booking across a high-volume fleet.</li>
+            <li>Coordinate the full maintenance cycle — service scheduling, workshop follow-up, and registration and insurance renewals — keeping vehicles road-legal and revenue-generating.</li>
+            <li>Manage the operational partnership with <strong>Invygo</strong>, covering vehicle supply, subscription handovers, and account reconciliation.</li>
+            <li>Designed and built the <strong>YELO management platform</strong> and own it end to end — requirements, development, deployment, and team rollout.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <div class="job-head">
+            <span class="job-title">Branch Accountant</span>
+            <span class="job-date">Jun 2022 – Dec 2024</span>
+        </div>
+        <div class="job-org">Carrefour — Egypt</div>
+        <ul>
+            <li>Managed branch financial records, ensuring accuracy and compliance with company policies.</li>
+            <li>Processed invoices, tracked expenses, and prepared financial reports.</li>
+            <li>Conducted inventory audits and reconciled discrepancies in stock records.</li>
+            <li>Collaborated with sales and operations teams to streamline financial workflows.</li>
+            <li>Ensured timely submission of tax and financial statements.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <div class="job-head">
+            <span class="job-title">Cash and Accounting Supervisor</span>
+            <span class="job-date">Aug 2019 – May 2022</span>
+        </div>
+        <div class="job-org">Abdullah Al-Othaim Markets — Egypt</div>
+        <ul>
+            <li>Managed customer support operations, improving response time by 30%.</li>
+            <li>Oversaw daily cash operations and ensured accurate cash flow management.</li>
+            <li>Balanced cash registers and generated reports for credit and debit sales.</li>
+            <li>Processed refunds and exchanges and resolved customer complaints.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <div class="job-head">
+            <span class="job-title">Head Cashier</span>
+            <span class="job-date">Apr 2016 – Jul 2019</span>
+        </div>
+        <div class="job-org">Carrefour — Egypt</div>
+        <ul>
+            <li>Delivered front-line customer service at checkout, processing payments and issuing receipts.</li>
+            <li>Resolved customer complaints and handled credit and debit transaction issues.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <div class="job-head">
+            <span class="job-title">Customer Service Officer</span>
+            <span class="job-date">Feb 2015 – Mar 2016</span>
+        </div>
+        <div class="job-org">Telecom Egypt</div>
+        <ul>
+            <li>Handled high volumes of inbound and outbound calls, identifying customer needs and resolving issues.</li>
+            <li>Sold SIM cards and handled complaints regarding company products and services.</li>
+        </ul>
+    </div>
+
+    <!-- ================= PROJECTS ================= -->
+    <h2>Projects</h2>
+
+    <div class="job">
+        <div class="job-head">
+            <span class="job-title">YELO Platform — Car Rental Management System</span>
+            <span class="job-date">2025 – Present</span>
+        </div>
+        <div class="job-org">React · Firebase Authentication · Internal admin system</div>
+        <ul>
+            <li>Built and deployed a multi-module platform covering the whole business: fleet inventory and live vehicle status, bookings and contracts, financial management and invoicing, staff administration, maintenance tracking, and Invygo partner reconciliation.</li>
+            <li>Automated invoice and report generation from operational inputs, removing manual calculation and effectively eliminating human error in billing and data entry.</li>
+            <li>Raised fleet utilisation by surfacing true vehicle status in real time, so available cars are identified immediately and maintenance is tracked continuously rather than reactively.</li>
+            <li>Replaced spreadsheet-based tracking across a 1,300+ vehicle operation with a single source of truth, secured with Firebase Authentication and role-based access.</li>
+            <li class="note">Internal management system — access restricted because it holds confidential customer and employee data. A guided walkthrough is available on request.</li>
+        </ul>
+    </div>
+
+    <!-- ================= SKILLS ================= -->
+    <h2>Core Skills</h2>
+    <ul class="skills">
+        <li>Rental Operations Management</li>
+        <li>Fleet Management &amp; Utilisation (1,300+ vehicles)</li>
+        <li>Vehicle Maintenance Coordination</li>
+        <li>Lease &amp; Rental Contract Administration</li>
+        <li>Salik, Traffic Fines &amp; Parking Reconciliation</li>
+        <li>B2B Partner Management (Invygo)</li>
+        <li>React &amp; Firebase</li>
+        <li>Process Automation &amp; Digitisation</li>
+        <li>ERP Systems</li>
+        <li>Customer Relationship Management (CRM)</li>
+        <li>Accounting &amp; Financial Analysis</li>
+        <li>Inventory Management</li>
+        <li>Data Analysis &amp; Reporting</li>
+        <li>Microsoft Office Suite</li>
+        <li>Team Leadership &amp; Training</li>
+        <li>Compliance &amp; Confidentiality</li>
+    </ul>
+
+    <!-- ================= ACHIEVEMENTS ================= -->
+    <h2>Key Achievements</h2>
+    <ul>
+        <li>Built and launched the YELO management platform, digitising a 1,300+ vehicle rental operation previously tracked manually on spreadsheets.</li>
+        <li>Automated invoicing and reporting, effectively eliminating human error in billing and improving fleet utilisation through real-time vehicle status.</li>
+        <li>Recognised among the Top 10 employees in the region at Abdullah Al-Othaim Markets.</li>
+        <li>Trained and mentored new team members, contributing to a 15% improvement in team performance metrics.</li>
+    </ul>
+
+    <!-- ================= EDUCATION / LANGUAGES ================= -->
+    <div class="cols">
+        <div>
+            <h2>Education</h2>
+            <div class="job-title">Bachelor's Degree, Islamic Da'wah</div>
+            <div class="job-org">Al-Azhar University</div>
+        </div>
+        <div>
+            <h2>Languages</h2>
+            <ul>
+                <li>Arabic — Native</li>
+                <li>English — Professional</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
