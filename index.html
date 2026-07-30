@@ -1,123 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mohamed Alamir Ali</title>
-    <meta name="description" content="Mohamed Alamir Ali — Operations Executive, Dubai. English and Arabic CV.">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <style>
-        body {
-            background: url("background2.jpg") no-repeat center center fixed;
-            background-size: cover;
-            padding: 2rem;
-        }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mohamed Alamir Ali — Operations Executive, Dubai</title>
+<meta name="description" content="Operations Executive at Yelo Rent A Car, Dubai. 18 years across retail, telecom and rental operations. English and Arabic CV.">
 
-        .container {
-            width: 100%;
-            padding-right: 15px;
-            padding-left: 15px;
-            margin-right: auto;
-            margin-left: auto;
-        }
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Mohamed Alamir Ali — Operations Executive, Dubai">
+<meta property="og:description" content="18 years in operations and customer service. Managing a 1,300+ vehicle fleet at Yelo Rent A Car, Dubai.">
+<meta property="og:image" content="https://moalamir52.github.io/mohamed-alamir.jpg">
+<meta property="og:url" content="https://moalamir52.github.io/">
+<meta name="twitter:card" content="summary">
 
-        .links-container {
-            display: flex;
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2314395c'/><text y='.9em' x='50' text-anchor='middle' font-size='62' font-family='Georgia,serif' fill='white'>M</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
+<style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+        --navy:   #14395c;
+        --blue:   #2b6cb0;
+        --ink:    #23303c;
+        --muted:  #6b7a89;
+        --line:   #e3e8ee;
+    }
+
+    body {
+        font-family: 'Lato', 'Segoe UI', Tahoma, sans-serif;
+        color: var(--ink);
+        background:
+            radial-gradient(900px 500px at 15% -10%, #1d4d7a 0%, transparent 60%),
+            radial-gradient(700px 500px at 100% 100%, #0d2b45 0%, transparent 60%),
+            linear-gradient(160deg, #0f2d4a 0%, #14395c 55%, #0c2440 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 28px 18px;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .card {
+        width: 100%;
+        min-width: 0;
+        max-width: 660px;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 24px 60px rgba(0,0,0,.28);
+        overflow: hidden;
+    }
+
+    /* ---------- Header ---------- */
+    .head {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        padding: 30px 34px 24px;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .photo {
+        width: 116px;
+        height: 116px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center 18%;
+        border: 3px solid #fff;
+        box-shadow: 0 0 0 2px var(--navy), 0 8px 20px rgba(0,0,0,.18);
+    }
+
+    h1 {
+        font-family: 'Merriweather', Georgia, serif;
+        font-size: 1.72rem;
+        line-height: 1.2;
+        color: var(--navy);
+        letter-spacing: -.3px;
+    }
+
+    .role {
+        margin-top: 5px;
+        font-size: .82rem;
+        font-weight: 900;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--blue);
+    }
+
+    .place {
+        margin-top: 7px;
+        font-size: .93rem;
+        color: var(--muted);
+        overflow-wrap: break-word;
+    }
+
+    .head > div { min-width: 0; }
+
+    /* ---------- Stats ---------- */
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        border-bottom: 1px solid var(--line);
+    }
+
+    .stat {
+        padding: 16px 10px;
+        text-align: center;
+        border-right: 1px solid var(--line);
+    }
+    .stat:last-child { border-right: 0; }
+
+    .stat b {
+        display: block;
+        font-family: 'Merriweather', Georgia, serif;
+        font-size: 1.28rem;
+        color: var(--navy);
+        line-height: 1.1;
+    }
+    .stat span {
+        display: block;
+        margin-top: 4px;
+        font-size: .72rem;
+        letter-spacing: .7px;
+        text-transform: uppercase;
+        color: var(--muted);
+    }
+
+    /* ---------- Body ---------- */
+    .body { padding: 24px 34px 30px; }
+
+    .pitch {
+        font-size: .99rem;
+        line-height: 1.65;
+        color: #3c4a58;
+        margin-bottom: 22px;
+    }
+    .pitch strong { color: var(--navy); }
+
+    .links { display: grid; gap: 11px; }
+
+    .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        padding: 14px 20px;
+        border-radius: 11px;
+        font-size: .97rem;
+        font-weight: 700;
+        text-align: center;
+        text-decoration: none;
+        border: 1.5px solid transparent;
+        transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease;
+    }
+    .btn .arrow { font-weight: 400; opacity: .6; }
+
+    .btn-primary {
+        background: var(--navy);
+        color: #fff;
+        box-shadow: 0 4px 14px rgba(20,57,92,.28);
+    }
+    .btn-primary:hover { background: #1b4a75; transform: translateY(-2px); }
+
+    .btn-ghost {
+        background: #fff;
+        color: var(--navy);
+        border-color: var(--line);
+    }
+    .btn-ghost:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); }
+
+    .row2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 11px; }
+
+    footer {
+        margin-top: 22px;
+        padding-top: 16px;
+        border-top: 1px solid var(--line);
+        text-align: center;
+        font-size: .82rem;
+        color: var(--muted);
+    }
+    footer a { color: var(--blue); text-decoration: none; overflow-wrap: anywhere; }
+    footer a:hover { text-decoration: underline; }
+    footer .sep { margin: 0 8px; color: var(--line); }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 560px) {
+        .head {
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
+            text-align: center;
+            gap: 16px;
+            padding: 28px 22px 22px;
         }
+        h1 { font-size: 1.45rem; }
+        .body { padding: 22px 22px 26px; }
+        .row2 { grid-template-columns: 1fr; }
+        .stat b { font-size: 1.12rem; }
+    }
 
-        .links-container a {
-            width: 80%;
-            box-shadow: 2px 2px 0 #444;
-        }
-
-        .name {
-            background-color: rgba(121, 85, 72, 0.4);
-            color: #ccc;
-            text-shadow: 4px 4px 0 #444;
-            box-shadow: 2px 2px 0 #444;
-            font-size: 18px;
-        }
-
-        .subtext {
-            font-size: 16px;
-            background-color: rgba(121, 85, 72, 0.4);
-            color: #ccc;
-            text-shadow: 1px 1px 0 #444;
-            box-shadow: 2px 2px 0 #444;
-        }
-
-        .portrait {
-            border-color: #553c33 !important;
-            width: 100%;
-            max-width: 350px;
-            height: auto;
-            max-height: 500px;
-            border-radius: 5%;
-        }
-
-        .name span {
-            display: block;
-        }
-
-        .skew-1 {
-            -webkit-transform: skewX(20deg);
-            transform: skewX(20deg);
-        }
-
-        .skew-text-1 {
-            -webkit-transform: skewX(-20deg);
-            transform: skewX(-20deg);
-        }
-
-        .skew-2 {
-            -webkit-transform: skewX(-20deg);
-            transform: skewX(-20deg);
-        }
-
-        .skew-text-2 {
-            -webkit-transform: skewX(20deg);
-            transform: skewX(20deg);
-        }
-
-        @media (min-width: 576px) {
-            .container {
-                max-width: 540px;
-            }
-
-            .name {
-                font-size: 36px;
-            }
-        }
-    </style>
+    @media (prefers-reduced-motion: reduce) {
+        .btn { transition: none; }
+        .btn:hover { transform: none; }
+    }
+</style>
 </head>
 <body>
 
-    <!-- Content container -->
-    <div class="container">
+<main class="card">
 
-        <!-- Image and name -->
-        <div style="text-align: center">
-            <img loading="lazy" src="./mohamed-alamir.jpg"
-                 class="portrait w3-topbar w3-bottombar w3-rightbar w3-leftbar w3-border-dark-grey"
-                 alt="Mohamed Alamir Ali">
-            <h1 class="name"><span class="w3-padding w3-round" style="font-weight: bolder;">Hello, I'm Mohamed Alamir</span></h1>
-            <h2 class="subtext name w3-padding w3-round" style="font-weight: bolder;">SEE WHAT I'M UP TO!</h2>
+    <div class="head">
+        <img class="photo" src="mohamed-alamir.jpg" alt="Mohamed Alamir Ali">
+        <div>
+            <h1>Mohamed Alamir Ali</h1>
+            <div class="role">Operations Executive</div>
+            <div class="place">Yelo Rent A Car &middot; Dubai, United Arab Emirates</div>
         </div>
-
-        <br><br>
-
-        <!-- Links -->
-        <div class="links-container">
-            <a href="./english.html" class="w3-button w3-round w3-brown w3-hover-blue-grey skew-2"><span class="skew-text-2">Check my English CV !</span></a>
-            <a href="./arabic.html" class="w3-button w3-round w3-blue w3-hover-blue-grey skew-1"><span class="skew-text-1">! تحقق من سيرتي الذاتية باللغة العربية</span></a>
-            <a href="https://www.linkedin.com/in/mohamed-alamir/" class="w3-button w3-round w3-deep-orange w3-hover-blue-grey skew-2" target="_blank" rel="noopener"><span class="skew-text-2">Check my LinkedIn!</span></a>
-        </div>
-
     </div>
+
+    <div class="stats">
+        <div class="stat"><b>18</b><span>Years</span></div>
+        <div class="stat"><b>1,300+</b><span>Fleet</span></div>
+        <div class="stat"><b>AR / EN</b><span>Bilingual</span></div>
+    </div>
+
+    <div class="body">
+        <p class="pitch">
+            I run daily rental operations for a <strong>1,300+ vehicle fleet</strong> in Dubai — contracts,
+            RTA registrations, invoicing, maintenance and the Invygo partnership. I also designed and built
+            the <strong>YELO management platform</strong> that runs it, replacing spreadsheets with software.
+        </p>
+
+        <div class="links">
+            <a class="btn btn-primary" href="./english.html">View CV — English</a>
+            <a class="btn btn-primary" href="./arabic.html" dir="rtl">عرض السيرة الذاتية — العربية</a>
+
+            <div class="row2">
+                <a class="btn btn-ghost" href="https://www.linkedin.com/in/mohamed-alamir/" target="_blank" rel="noopener">
+                    LinkedIn <span class="arrow">&#8599;</span>
+                </a>
+                <a class="btn btn-ghost" href="Mohamed Alamir` Resume.pdf" download>
+                    Download PDF <span class="arrow">&darr;</span>
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <a href="mailto:mo.alamir52@gmail.com">mo.alamir52@gmail.com</a>
+            <span class="sep">&middot;</span>
+            <a href="https://wa.me/971553796104" target="_blank" rel="noopener">+971&nbsp;55&nbsp;379&nbsp;6104</a>
+        </footer>
+    </div>
+
+</main>
 
 </body>
 </html>
