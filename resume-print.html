@@ -12,8 +12,8 @@
 
     body {
         font-family: 'Lato', 'Segoe UI', Arial, sans-serif;
-        font-size: 10.2pt;
-        line-height: 1.5;
+        font-size: 9.9pt;
+        line-height: 1.42;
         color: #2b2b2b;
         background: #e8e8e8;
         padding: 24px 0;
@@ -33,14 +33,14 @@
     header {
         display: flex;
         align-items: center;
-        gap: 7mm;
-        padding-bottom: 9px;
+        gap: 6mm;
+        padding-bottom: 7px;
         border-bottom: 2.5px solid #14395c;
     }
 
     .photo {
-        width: 27mm;
-        height: 27mm;
+        width: 24mm;
+        height: 24mm;
         border-radius: 50%;
         object-fit: cover;
         object-position: center top;
@@ -81,14 +81,14 @@
         text-transform: uppercase;
         letter-spacing: 1.4px;
         color: #14395c;
-        margin: 10px 0 5px;
+        margin: 8px 0 4px;
         padding-bottom: 2px;
         border-bottom: 1px solid #d4d4d4;
     }
 
     p.summary { text-align: justify; }
 
-    .job { margin-bottom: 8px; page-break-inside: avoid; }
+    .job { margin-bottom: 6px; page-break-inside: avoid; }
     .job:last-child { margin-bottom: 0; }
 
     .job-head {
@@ -102,7 +102,7 @@
     .job-org   { font-size: 9.4pt; font-weight: 700; color: #2b6cb0; margin-bottom: 3px; }
 
     ul { margin: 0; padding-left: 14px; }
-    li { margin-bottom: 2px; }
+    li { margin-bottom: 1px; }
     li::marker { color: #2b6cb0; }
 
     .note { font-size: 8.9pt; color: #6e6e6e; font-style: italic; }
@@ -119,10 +119,10 @@
     .skills li { break-inside: avoid; }
 
     /* ---------- Print ---------- */
-    @page { size: A4; margin: 11mm 13mm; }
+    @page { size: A4; margin: 9mm 12mm; }
 
     @media print {
-        body { background: #fff; padding: 0; font-size: 9.9pt; }
+        body { background: #fff; padding: 0; font-size: 9.3pt; }
         .page {
             width: auto;
             min-height: 0;
@@ -209,9 +209,8 @@
         </div>
         <div class="job-org">Telecom Egypt — Cairo, Egypt</div>
         <ul>
-            <li>Handled high volumes of inbound and outbound calls, identifying customer needs and owning each issue through to resolution.</li>
-            <li>Sold SIM lines and mobile plans, and resolved complaints on company products and services.</li>
-            <li>Coordinated meetings and supported senior management, maintaining compliance with company policy in a fast-paced call centre environment.</li>
+            <li>Handled high volumes of inbound and outbound calls, owning each issue through to resolution, and sold SIM lines and mobile plans.</li>
+            <li>Coordinated meetings and supported senior management, maintaining compliance with company policy.</li>
             <li>Mentored junior agents on call handling and escalation, raising first-contact resolution across the team.</li>
         </ul>
     </div>
@@ -223,10 +222,8 @@
         </div>
         <div class="job-org">Ragab Sons — Cairo, Egypt</div>
         <ul>
-            <li>Progressed from cashier to supervising the front area of one of Egypt's largest retail chains, covering checkout, customer service, and returns.</li>
-            <li>Supervised cashier shifts and float handling, keeping tills accurate and queues moving during peak trading.</li>
-            <li>Resolved escalated customer complaints at the front line and maintained store procedures for coupons, gift cards, and exchanges.</li>
-            <li>Trained new cashiers on point-of-sale systems, cash handling, and customer service standards.</li>
+            <li>Progressed from cashier to supervising the front area of one of Egypt's largest retail chains, covering checkout, customer service and returns.</li>
+            <li>Supervised cashier shifts and float handling, resolved escalated complaints, and trained new employees on point-of-sale and cash handling.</li>
         </ul>
     </div>
 
@@ -235,16 +232,44 @@
 
     <div class="job">
         <div class="job-head">
-            <span class="job-title">YELO Platform — Car Rental Management System</span>
+            <span class="job-title">YELO Management Platform — Rental Operations System</span>
             <span class="job-date">2025 – Present</span>
         </div>
-        <div class="job-org">React · Firebase Authentication · Internal admin system</div>
+        <div class="job-org">React · Firebase · Internal platform, Yelo Rent A Car</div>
         <ul>
-            <li>Built and deployed a multi-module platform covering the whole business: fleet inventory and live vehicle status, bookings and contracts, financial management and invoicing, staff administration, maintenance tracking, and Invygo partner reconciliation.</li>
-            <li>Automated invoice and report generation from operational inputs, removing manual calculation and effectively eliminating human error in billing and data entry.</li>
-            <li>Raised fleet utilisation by surfacing true vehicle status in real time, so available cars are identified immediately and maintenance is tracked continuously rather than reactively.</li>
-            <li>Replaced spreadsheet-based tracking across a 1,300+ vehicle operation with a single source of truth, secured with Firebase Authentication and role-based access.</li>
-            <li class="note">Internal management system — access restricted because it holds confidential customer and employee data. A guided walkthrough is available on request.</li>
+            <li>Built and deployed the platform that runs the business: contract management, fleet inventory and live vehicle status, automated invoicing, employee and document tracking, government transactions, KPI dashboards, vehicle history, petty cash and expense control, and outstanding balance tracking.</li>
+            <li>Added OCR extraction of customer details from Emirates IDs and driving licences, plus photo-based handover and inspection verification, cutting disputes over vehicle condition.</li>
+            <li>Replaced spreadsheet tracking across a 1,300+ vehicle operation with a single source of truth, secured with Firebase Authentication and role-based access.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <div class="job-head">
+            <span class="job-title">RTA Violation Automation</span>
+            <span class="job-date">2025</span>
+        </div>
+        <div class="job-org">Workflow automation · Yelo Rent A Car</div>
+        <ul>
+            <li>Automated the traffic violation cycle end to end: retrieves violations, matches each one to the active rental contract, and identifies the responsible customer.</li>
+            <li>Generates violation documents, archives the records, and prepares customer notifications — removing a manual lookup that previously ran per violation.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <div class="job-head">
+            <span class="job-title">Revenue Assurance &amp; Charge Reconciliation Engine</span>
+            <span class="job-date">2025</span>
+        </div>
+        <div class="job-org">Reconciliation framework · Yelo Rent A Car</div>
+        <ul>
+            <li>Reconciles fines, Salik tolls and parking charges against rental contracts, detecting unbilled transactions and missing operational records.</li>
+            <li>Flags revenue leakage through exception-based reporting, replacing line-by-line manual auditing.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <ul>
+            <li class="note">These are internal systems — access is restricted because they hold confidential customer and employee data. A guided walkthrough is available on request.</li>
         </ul>
     </div>
 
@@ -264,20 +289,20 @@
     <ul class="skills">
         <li>Rental Operations Management</li>
         <li>Fleet Management &amp; Utilisation (1,300+ vehicles)</li>
-        <li>Vehicle Maintenance Coordination</li>
+        <li>Business Process Automation</li>
+        <li>Revenue Assurance &amp; Reconciliation</li>
+        <li>Operations Analytics</li>
+        <li>Workflow Design</li>
+        <li>RTA Compliance &amp; Violation Handling</li>
+        <li>Salik, Fines &amp; Parking Reconciliation</li>
         <li>Lease &amp; Rental Contract Administration</li>
-        <li>RTA Registration &amp; Compliance</li>
-        <li>Salik, Traffic Fines &amp; Parking Reconciliation</li>
+        <li>Vehicle Maintenance Coordination</li>
         <li>B2B Partner Management (Invygo)</li>
-        <li>Invoicing &amp; Cash Reconciliation</li>
-        <li>React, Firebase &amp; Web App Development</li>
-        <li>AI Tools &amp; LLM Applications</li>
-        <li>AI-Assisted Excel &amp; Word Automation</li>
-        <li>Prompt Engineering</li>
-        <li>Process Automation &amp; Digitisation</li>
-        <li>ERP Systems</li>
-        <li>Customer Relationship Management (CRM)</li>
-        <li>Customer Service &amp; Complaint Resolution</li>
+        <li>System Integration</li>
+        <li>OCR Solutions</li>
+        <li>AI Applications &amp; LLM Tools</li>
+        <li>React, Firebase &amp; Full-Stack Development</li>
+        <li>Database Management</li>
         <li>Data Analysis &amp; Reporting</li>
         <li>Microsoft 365 &amp; Office Suite</li>
         <li>Team Leadership &amp; Training</li>
